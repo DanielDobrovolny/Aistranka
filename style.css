@@ -1,37 +1,57 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #222; /* Tmavé pozadí pro celou stránku */
+    color: #f4f4f4; /* Světle šedý text pro lepší čitelnost na tmavém pozadí */
     margin: 0;
     padding: 0;
 }
 
+/* Styl pro záhlaví */
 header {
-    background-color: #333;
-    color: white;
+    background-color: #333; /* Tmavě šedé pozadí pro záhlaví */
+    color: #fff;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 1.5em;
-    margin-top: 20px;
+header p {
+    font-size: 1.2em;
 }
 
+/* Styl pro jednotlivé sekce */
 section {
     padding: 20px;
-    margin: 10px;
-    background-color: white;
+    margin: 20px;
+    background-color: #333; /* Tmavé pozadí pro sekce */
     border-radius: 8px;
 }
 
+h2 {
+    font-size: 2em;
+    color: #ffd700; /* Zlatá barva pro nadpisy */
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+/* Styl pro zápatí */
 footer {
     background-color: #333;
-    color: white;
+    color: #fff;
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -39,6 +59,6 @@ footer {
     width: 100%;
 }
 
-p {
-    line-height: 1.6;
-}
+/* Odstíny textu pro zlepšení čitelnosti */
+footer p {
+    font-size: 1em;
