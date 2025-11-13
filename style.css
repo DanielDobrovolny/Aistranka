@@ -1,86 +1,143 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Air Jordan – vizuální stránka s informacemi o modelech a historii.">
-  <title>Air Jordan – Ikona Stylu</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="overlay"></div>
-    <div class="header-content">
-      <h1>Air Jordan – Ikona Stylu</h1>
-      <p>Objev legendární boty, které změnily svět basketbalu i módy.</p>
-    </div>
-  </header>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Main content -->
-  <main>
-    <!-- O značce -->
-    <section class="intro">
-      <h2>O značce Jordan</h2>
-      <p>Značka <strong>Air Jordan</strong> vznikla ve spolupráci Nike a Michaela Jordana v roce 1985. 
-      Od té doby se stala symbolem sportu, módy i sebevědomí.</p>
-    </section>
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #222;
+  line-height: 1.6;
+}
 
-    <!-- Modely -->
-    <section class="models">
-      <h2>Nejznámější modely</h2>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1606813902963-9840a346e6b5?auto=format&fit=crop&w=800&q=80" alt="Air Jordan 1">
-        <div class="info">
-          <h3>Air Jordan 1</h3>
-          <p>Klasický retro model, který odstartoval legendu. Populární barvy: Chicago, Bred, Royal Blue.</p>
-          <ul>
-            <li>Rok vydání: 1985</li>
-            <li>Styl: Retro / Streetwear</li>
-          </ul>
-        </div>
-      </div>
+/* Header */
+header {
+  position: relative;
+  height: 60vh;
+  background: url('https://images.unsplash.com/photo-1606813902963-9840a346e6b5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1611078486883-6f8c177ba2d6?auto=format&fit=crop&w=800&q=80" alt="Air Jordan 4">
-        <div class="info">
-          <h3>Air Jordan 4</h3>
-          <p>Styl a komfort, oblíbený mezi sportovci i sběrateli.</p>
-          <ul>
-            <li>Rok vydání: 1989</li>
-            <li>Styl: Sportovní elegance</li>
-          </ul>
-        </div>
-      </div>
+header .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+}
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1618457271828-74898b2c6fef?auto=format&fit=crop&w=800&q=80" alt="Air Jordan 11">
-        <div class="info">
-          <h3>Air Jordan 11</h3>
-          <p>Elegantní design s lesklými prvky, který Michael Jordan obul při návratu do NBA.</p>
-          <ul>
-            <li>Rok vydání: 1995</li>
-            <li>Styl: Luxusní streetwear</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+header .header-content {
+  position: relative;
+  z-index: 1;
+}
 
-    <!-- Zajímavosti -->
-    <section class="facts">
-      <h2>Zajímavosti</h2>
-      <ul>
-        <li>Air Jordan 1 byly původně zakázány NBA kvůli barvám.</li>
-        <li>Retro edice se vyprodávají během minut.</li>
-        <li>Michael Jordan vydělává na prodeji Jordan bot více než většina současných hráčů NBA.</li>
-      </ul>
-    </section>
-  </main>
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Jordan Info Page
-  </footer>
-</body>
-</html>
+header p {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Sections */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+section h2 {
+  color: #d90429;
+  margin-bottom: 20px;
+  font-size: 2em;
+  border-left: 5px solid #d90429;
+  padding-left: 10px;
+}
+
+/* Model cards */
+.models .card {
+  display: flex;
+  flex-wrap: wrap;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.models .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.models .card img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+.models .card .info {
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.models .card .info h3 {
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.models .card .info ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #555;
+}
+
+/* Facts */
+.facts {
+  background: #f0f8ff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.facts ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .models .card {
+    flex-direction: column;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+}
